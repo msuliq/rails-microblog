@@ -16,6 +16,8 @@ gem "jquery-rails", "4.0.3"
 gem "turbolinks", "2.3.0"
 gem "jbuilder", "2.2.3"
 gem "bundler", "1.17.3"
+gem "listen", "2.10.1"
+gem "rake", "10.4.2"
 gem "sdoc", "0.4.0", group: :doc
 
 group :development, :test do
