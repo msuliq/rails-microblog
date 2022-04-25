@@ -1,3 +1,5 @@
+Rails 4: sample microblogging application 
+
 == README
 
 This README would normally document whatever steps are necessary to get the
