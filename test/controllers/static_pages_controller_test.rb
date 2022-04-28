@@ -9,7 +9,8 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home | #{@base_title}"
+    #base title is defined in application helper
+    assert_select "title", "Sample microblog app" 
   end
 
   test "should get help" do
