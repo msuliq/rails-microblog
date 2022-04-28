@@ -5,7 +5,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   def setup
     @base_title = "Sample microblog app"
   end
-
+ # tests for verifying correct webpage titles
   test "should get home" do
     get :home
     assert_response :success
