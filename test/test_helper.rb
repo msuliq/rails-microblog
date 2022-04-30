@@ -12,4 +12,9 @@ class ActiveSupport::TestCase
   include ApplicationHelper
 
   # Add more helper methods to be used by all tests here...
+  def setup
+    @user = User.new(name: "Example User", email: "user@example.com", 
+                    password: "foobar", password_confirmation: "foobar")
+  end
+
 end
