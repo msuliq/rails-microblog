@@ -8,6 +8,21 @@
 
 $gray-light-medium: #eaeaea;
 
+/* debug params display in development env*/
+
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+}
+
 /* common styles */
 
 body {
