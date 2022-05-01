@@ -12,6 +12,10 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
 
     assert_template 'users/new'
+
+    #check that error flash messages are displayed
+    assert_select 'div#<CSS id for error explanation>'
+    assert_select 'div.<CSS class for field with error>'
   end
 
   test "valid signup information" do
@@ -24,5 +28,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     
     assert_template 'users/show'
+    #check that success flash message is displayed
+    assert_not flash.empty?
     end
 end
