@@ -17,4 +17,8 @@ class ActiveSupport::TestCase
                     password: "foobar", password_confirmation: "foobar")
   end
 
+  # This is different from logged_in? defined in sessions helper
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end
