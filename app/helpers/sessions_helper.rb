@@ -12,7 +12,7 @@ module SessionsHelper
     end
 
     # Returns true if present user is current user
-    def current_user?
+    def current_user?(user)
         user == current_user
     end
 

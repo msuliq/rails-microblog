@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     log_in @user
     # Code for the checkbox on login page to remember user
     params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
-    redirect_to @user
+    redirect_back_or @user
     else
     # Flashes an error message
     flash.now[:danger] = 'Invalid email/password combination'
