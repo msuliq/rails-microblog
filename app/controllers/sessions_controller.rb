@@ -23,4 +23,9 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
 
+  private
+    def redirect_back_or(path)
+      redirect_to session[:forwarding_url] || path
+      session.delete(:forwarding_url)
+    end
 end
