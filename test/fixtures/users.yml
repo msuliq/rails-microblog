@@ -7,3 +7,20 @@ dwight:
   name: Dwight Schrute
   email: dschrute@dundermifflin.com
   password_digest: <%= User.digest('password') %>
+
+pam:
+  name: Pam Beesly
+  email: pbeesly@dundermifflin.com
+  password_digest: <%= User.digest('password') %>
+
+angela:
+  name: Angela Martin
+  email: amartin@dundermifflin.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "Dunder Mifflinite #{n}" %>
+  email: <%= "user-#{n}@dundermifflin.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
