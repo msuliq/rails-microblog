@@ -33,8 +33,9 @@ class User < ActiveRecord::Base
         update_attribute(:remember_digest, User.digest(remember_token))
     end
 
-    # Returns true is token matches digest
-    # Method is also accessed for account activations
+    # Returns true if token and attribute match digest 
+    # Attribute is used for account activation
+    # Token is used for permanent session
     def authenticated?(attribute, token)
         digest = send("#{attribute}_digest")
         return false if digest.nil?
