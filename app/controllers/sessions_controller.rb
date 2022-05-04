@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:session] [:email].downcase)
     if @user && @user.authenticate(params[:session][:password])
       # Logs in and redirects to user profile page
-      if user.activated?
+      if @user.activated?
         log_in @user
         # Code for the checkbox on login page to remember user
         params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
