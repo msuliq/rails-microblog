@@ -34,9 +34,11 @@ class User < ActiveRecord::Base
     end
 
     # Returns true is token matches digest
+    # Method is also accessed for account activations
     def authenticated?(remember_token)
-        return false if remember_digest.nil?
-        BCrypt::Password.new(remember_digest).is_password?(remember_token)
+        digest = send("#{attribute}_digest")
+        return false if digest.nil?
+        BCrypt::Password.new(digest).is_password?(token)
     end
 
     # Forgets the user
