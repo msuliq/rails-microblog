@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
 
     # Returns true is token matches digest
     # Method is also accessed for account activations
-    def authenticated?(remember_token)
+    def authenticated?(attribute, token)
         digest = send("#{attribute}_digest")
         return false if digest.nil?
         BCrypt::Password.new(digest).is_password?(token)
