@@ -4,4 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   # Sessions helper add support for login, logout and cookies
   include SessionsHelper
+
+  private
+    # Used in users and microposts controllers
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
 end
