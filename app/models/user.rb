@@ -76,6 +76,11 @@ class User < ActiveRecord::Base
         update_attribute(:remember_digest, nil)
     end
 
+    # Temporary solution for the posts feed
+    def feed
+        Microposts.where("user_id = ?", id)
+    end
+
     private
     
         # Changes email to downcase before storing in db
