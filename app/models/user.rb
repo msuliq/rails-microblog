@@ -78,7 +78,7 @@ class User < ActiveRecord::Base
 
     # Temporary solution for the posts feed
     def feed
-        Microposts.where("user_id = ?", id)
+        Micropost.where("user_id = ?", id)
     end
 
     private

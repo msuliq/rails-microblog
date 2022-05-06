@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
         redirect_to root_url
       end
     else
-    # Flashes an error message if password or email don't match
-    flash.now[:danger] = 'Invalid email/password combination'
-    render 'new'
+      # Flashes an error message if password or email don't match
+      flash.now[:danger] = 'Invalid email/password combination'
+      render 'new'
     end
   end
 
