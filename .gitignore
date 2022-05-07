@@ -17,5 +17,7 @@
 /tmp
 # Ignore spring directory
 spring/
+# Ignore uploaded test images
+/public/uploads
 
 .DS_Store
