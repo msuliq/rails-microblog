@@ -1,0 +1,15 @@
+one:
+  follower: michael
+  followed: pam
+
+two:
+  follower: michael
+  followed: angela
+
+three:
+  follower: pam
+  followed: michael
+
+four:
+  follower: dwight
+  followed: michael
