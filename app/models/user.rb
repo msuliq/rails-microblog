@@ -1,12 +1,17 @@
 class User < ActiveRecord::Base
     has_many :microposts, dependent: :destroy
+    # Definition for relationship with user's followers
     has_many :active_relationships, class_name: "Relationship",
                                     foreign_key: "follower_id",
                                     dependent: :destroy
-    
+    # Definition for relationship with who the user follows
+    has_many :passive_relationships, class_name: "Relationship",
+                                    foreign_key: "followed_id",
+                                    dependent: :destroy
     # Source is shown since there is no adequate plural form for followed
     has_many :following, through: :active_relationships, source: :followed
-    
+    has_many :followers, through: :passive_relationships
+
     # Adds accessors to create activation token,
     # remember and reset password token
     attr_accessor :remember_token, :activation_token, :reset_token
