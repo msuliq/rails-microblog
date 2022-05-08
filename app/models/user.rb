@@ -88,6 +88,21 @@ class User < ActiveRecord::Base
         Micropost.where("user_id = ?", id)
     end
 
+    # Establishes follow relationship
+    def follow(other_user)
+        active_relationships.create(followed_id: other_user.id)
+    end
+
+    # Destroys follow relationship
+    def unfollow(other_user)
+        active_relationships.find_by(followed_id: other_user.id).destroy
+    end
+
+    # Returns true if current user is a follower
+    def following?(other_user)
+        following.include?(other_user)
+    end
+
     private
     
         # Changes email to downcase before storing in db
