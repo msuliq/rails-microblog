@@ -88,9 +88,9 @@ class User < ActiveRecord::Base
         update_attribute(:remember_digest, nil)
     end
 
-    # Temporary solution for the posts feed
+    # Returns feed, SQL lang is used
     def feed
-        Micropost.where("user_id = ?", id)
+        Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
     end
 
     # Establishes follow relationship
