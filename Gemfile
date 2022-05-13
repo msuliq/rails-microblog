@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-ruby '2.2.10'
+ruby '2.4.10'
 
-gem "rails", "4.2.2"
+gem "rails", "4.2.8"
 gem "bcrypt", "3.1.7"
 gem "faker", "1.4.2"
 gem "carrierwave", "0.10.0"
@@ -36,7 +36,7 @@ gem "guard-minitest", "2.3.1"
 end
 
 group :production do
-gem "pg", "0.17.1"
+gem "pg", "0.18.4"
 gem "rails_12factor", "0.0.2"
 gem "puma", "3.7"
 end
