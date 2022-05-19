@@ -20,4 +20,4 @@ spring/
 # Ignore uploaded test images
 /public/uploads
 
-.DS_Store
+.DS_Storecoverage
