@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '3.1.2'
+ruby '2.6.3'
 
 gem "rails", "~> 5.2.8"
 gem "bcrypt", "3.1.7"
@@ -40,7 +40,7 @@ gem 'simplecov', require: false
 end
 
 group :production do
-gem "pg", "0.18.4"
+gem "pg", "~> 1.3.5"
 gem "rails_12factor", "0.0.2"
 gem "puma", "4.3.0"
 end
