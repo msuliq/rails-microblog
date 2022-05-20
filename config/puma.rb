@@ -9,6 +9,6 @@ environment ENV['RACK_ENV'] || 'development'
 on_worker_boot do
     # specific settings for Rails 4.1+ are at: https://devcenter.heroku.com/articles/
     # deploying-rails-applications-with-the-puma-web-server#on-worker-boot
-    ActiveRecord::Base.establish_connection
+    ApplicationRecord.establish_connection
     end
     

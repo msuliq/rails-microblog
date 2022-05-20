@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
     has_many :microposts, dependent: :destroy
     # Definition for relationship with user's followers
     has_many :active_relationships, class_name: "Relationship",
