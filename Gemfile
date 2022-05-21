@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby '2.6.3'
 
 gem "rails", "~> 5.2.8"
+gem "rails-controller-testing", "~> 1.0.5"
 gem "bcrypt", "3.1.7"
 gem "faker", "1.4.2"
 gem "carrierwave", "~> 2.0"
