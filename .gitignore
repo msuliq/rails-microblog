@@ -20,4 +20,11 @@ spring/
 # Ignore uploaded test images
 /public/uploads
 
-.DS_Storecoverage
+# Ignore system generated DS Store
+.DS_Store
+
+# Ignore test coverage directory
+coverage/
+
+# Ignore node modules directory
+node_modules/
