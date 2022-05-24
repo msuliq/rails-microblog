@@ -24,7 +24,7 @@ spring/
 .DS_Store
 
 # Ignore test coverage directory
-/coverage/
+coverage/*
 
 # Ignore node modules directory
-node_modules/
+node_modules/*
