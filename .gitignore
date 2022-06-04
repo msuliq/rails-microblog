@@ -15,16 +15,33 @@
 /log/*
 !/log/.keep
 /tmp
-# Ignore spring directory
-spring/
-# Ignore uploaded test images
-/public/uploads
+!/tmp/.keep
 
-# Ignore system generated DS Store
+# Ignore uploaded files in dev
+/storage/*
+!/storage/.keep
+/public/assets
+.byebug_history
+
+# Ignore macOS generated DS Store
 .DS_Store
 
 # Ignore test coverage directory
 /coverage/
 
-# Ignore node modules directory
-node_modules/
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+.yarn/*
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore db test files.
+db/test.*
+
+# Ignore byebug history
+.byebug_history
