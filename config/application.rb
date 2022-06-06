@@ -40,6 +40,6 @@ module RailsMicroblog
 
     #   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
     # (called from <top (required)> at /Users/Suleyman/Projects/rails_microblog/config/environment.rb:8)
-    config.active_record.sqlite3.represent_boolean_as_integer = true
+    # config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end
