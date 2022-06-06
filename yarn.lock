@@ -2217,6 +2217,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap@npm:3.4.1":
+  version: 3.4.1
+  resolution: "bootstrap@npm:3.4.1"
+  checksum: 5742035e8c541cd525780542771e7d56f63e5d4b2d902427bf182d3383e74a17c9074b6809f50d7f3de0585377e673339628b97cfdcde597ad69ecb1d2b562a6
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -5403,6 +5410,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jquery@npm:3.4.1":
+  version: 3.4.1
+  resolution: "jquery@npm:3.4.1"
+  checksum: bcd23da10fb4f39cc8609e71e7a5169f368a2ba81ef4e146826466935c9a448ada70582928aa473430c4238e5b2c32e97a43fc9de372de00d075d5ad1629e15a
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -7752,6 +7766,8 @@ __metadata:
   resolution: "rails_microblog@workspace:."
   dependencies:
     "@rails/webpacker": 5.4.3
+    bootstrap: 3.4.1
+    jquery: 3.4.1
     webpack: ^4.46.0
     webpack-cli: ^3.3.12
     webpack-dev-server: ^3

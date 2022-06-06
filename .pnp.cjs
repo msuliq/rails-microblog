@@ -34,6 +34,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@rails/webpacker", "npm:5.4.3"],\
+            ["bootstrap", "npm:3.4.1"],\
+            ["jquery", "npm:3.4.1"],\
             ["webpack", "virtual:26804b6dcd300d3bfa22e8016d3d60c24575a3d5e03cf24cdc12404b56fcaed6d9bee72e8c911241966085e113d64de0cada1adf64edb688d5bd7da1d65b0be3#npm:4.46.0"],\
             ["webpack-cli", "virtual:26804b6dcd300d3bfa22e8016d3d60c24575a3d5e03cf24cdc12404b56fcaed6d9bee72e8c911241966085e113d64de0cada1adf64edb688d5bd7da1d65b0be3#npm:3.3.12"],\
             ["webpack-dev-server", "virtual:26804b6dcd300d3bfa22e8016d3d60c24575a3d5e03cf24cdc12404b56fcaed6d9bee72e8c911241966085e113d64de0cada1adf64edb688d5bd7da1d65b0be3#npm:3.11.3"]\
@@ -3328,6 +3330,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/boolbase-npm-1.0.0-965fe9af6d-3e25c80ef6.zip/node_modules/boolbase/",\
           "packageDependencies": [\
             ["boolbase", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["bootstrap", [\
+        ["npm:3.4.1", {\
+          "packageLocation": "./.yarn/cache/bootstrap-npm-3.4.1-c63015f4c4-5742035e8c.zip/node_modules/bootstrap/",\
+          "packageDependencies": [\
+            ["bootstrap", "npm:3.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6946,6 +6957,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["jquery", [\
+        ["npm:3.4.1", {\
+          "packageLocation": "./.yarn/cache/jquery-npm-3.4.1-4eab2619ac-bcd23da10f.zip/node_modules/jquery/",\
+          "packageDependencies": [\
+            ["jquery", "npm:3.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["js-tokens", [\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-8a95213a5a.zip/node_modules/js-tokens/",\
@@ -9588,6 +9608,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["rails_microblog", "workspace:."],\
             ["@rails/webpacker", "npm:5.4.3"],\
+            ["bootstrap", "npm:3.4.1"],\
+            ["jquery", "npm:3.4.1"],\
             ["webpack", "virtual:26804b6dcd300d3bfa22e8016d3d60c24575a3d5e03cf24cdc12404b56fcaed6d9bee72e8c911241966085e113d64de0cada1adf64edb688d5bd7da1d65b0be3#npm:4.46.0"],\
             ["webpack-cli", "virtual:26804b6dcd300d3bfa22e8016d3d60c24575a3d5e03cf24cdc12404b56fcaed6d9bee72e8c911241966085e113d64de0cada1adf64edb688d5bd7da1d65b0be3#npm:3.3.12"],\
             ["webpack-dev-server", "virtual:26804b6dcd300d3bfa22e8016d3d60c24575a3d5e03cf24cdc12404b56fcaed6d9bee72e8c911241966085e113d64de0cada1adf64edb688d5bd7da1d65b0be3#npm:3.11.3"]\
