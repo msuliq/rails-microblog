@@ -31,10 +31,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", user_path(@user)
     assert_select "a[href=?]", logout_path
 
-    get users_path
-    assert_template 'users/index'
-    #assert_select "a[href=?]", user_path, count: 25
-
     get signup_path
     assert_select "title", full_title("Sign up")
   end
