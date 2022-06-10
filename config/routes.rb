@@ -1,6 +1,7 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  #default landing page is home page
+Rails.application.routes.draw do
+  # default landing page is home page
   root 'static_pages#home'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
@@ -15,11 +16,11 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  
+
   resources :account_activations,     only: [:edit]
-  resources :password_resets,         only: [:new, :create, :edit, :update]
-  resources :microposts,              only: [:create, :destroy]
-  resources :relationships,           only: [:create, :destroy]
+  resources :password_resets,         only: %i[new create edit update]
+  resources :microposts,              only: %i[create destroy]
+  resources :relationships,           only: %i[create destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

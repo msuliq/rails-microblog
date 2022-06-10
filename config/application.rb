@@ -1,4 +1,6 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
+
+require File.expand_path('boot', __dir__)
 
 require 'rails/all'
 
@@ -25,7 +27,7 @@ module RailsMicroblog
 
     # Enable authentification token for remote forms
     config.action_view.embed_authenticity_token_in_remote_forms = true
-    
+
     # Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
     # set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
     # boolean values and must have old data converted to 1 and 0 (its native boolean

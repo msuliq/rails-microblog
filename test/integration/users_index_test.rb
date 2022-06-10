@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class UsersIndexTest < ActionDispatch::IntegrationTest
- 
   def setup
     @user = users(:dwight)
     @admin = users(:michael) # Michael is set admin in fixtures
@@ -9,7 +10,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
   end
 
   # Test involves only users with no difference whether admin or not
-  test "index including pagination" do
+  test 'index including pagination' do
     log_in_as(@user)
     get users_path
     assert_template 'users/index'
@@ -20,7 +21,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
   end
 
   # Following tests differentiate admins and non-admins
-  test "index as admin including pagination and delete links" do
+  test 'index as admin including pagination and delete links' do
     log_in_as(@admin)
     get users_path
     assert_template 'users/index'
@@ -30,7 +31,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
       assert_select 'a[href=?]', user_path(user), text: user.name
       unless user == @admin
         assert_select 'a[href=?]', user_path(user), text: 'delete',
-        method: :delete
+                                                    method: :delete
       end
     end
 
@@ -38,11 +39,10 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
       delete user_path(@non_admin)
     end
   end
-  
-  test "index as non-admin" do
+
+  test 'index as non-admin' do
     log_in_as(@non_admin)
     get users_path
     assert_select 'a', text: 'delete', count: 0
   end
-
 end
