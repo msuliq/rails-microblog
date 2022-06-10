@@ -21,11 +21,11 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     
     # Valid data in the form
     content = "This micropost really ties the room together"
-    picture = fixture_file_upload('test/fixtures/rails.png', 'image/png')
+    image = fixture_file_upload('test/fixtures/rails.png', 'image/png')
     assert_difference 'Micropost.count', 1 do
-      post microposts_path, params: { micropost: { content: content, picture: picture } }
+      post microposts_path, params: { micropost: { content: content, image: image } }
     end
-    assert assigns(:micropost).picture?
+    assert assigns(:micropost).image.attached?
     assert_redirected_to root_url
     follow_redirect!
     assert_match content, response.body
