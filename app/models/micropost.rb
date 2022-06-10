@@ -1,18 +1,19 @@
 class Micropost < ApplicationRecord
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
-  # Uploading is done thru gem carrierwave
-  mount_uploader :picture, PictureUploader
+  # Uploading done by activestorage
+  has_one_attached :image
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
-  validate :picture_size
+  validates :image, content_type: { in: %w[image/jpeg image/gif image/png],
+                                    message: "must be a valid image format" },
+                                    size: { less_than: 5.megabytes,
+                                    message: "should be less than 5MB" }
 
-  private
-    # Verifies picture size for upload
-    def picture_size
-      if picture.size > 5.megabytes
-        errors.add(:picture, "should be less than 5MB.")
-      end
-    end
+  
+  # Returns a resized image for display.
+  def display_image
+    image.variant(resize_to_limit: [500, 500])
+  end
 
 end
