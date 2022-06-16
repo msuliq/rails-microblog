@@ -7,23 +7,25 @@ ruby '3.1.2'
 gem 'carrierwave',                  '~> 2.2.2'
 gem 'fog',                          '~> 2.2.0'
 gem 'mini_magick',                  '~> 4.11.0'
+
 gem 'rails',                        '~> 7.0.3'
 
 gem 'active_storage_validations',   '~> 0.9.8'
+gem 'image_processing',             '~> 1.12.2'
+
 gem 'bcrypt',                       '~> 3.1.18'
 gem 'bootsnap',                     '~> 1.7.2', require: false
 gem 'bootstrap-sass',               '~> 3.4.1'
+gem 'sass-rails',                   '~> 6.0.0'
+gem 'will_paginate',                '~> 3.3.1'
 gem 'bootstrap-will_paginate',      '~> 1.0.0'
-gem 'faker',                        '~> 2.21.0'
-gem 'image_processing',             '~> 1.12.2'
 gem 'jbuilder',                     '~> 2.11.5'
+gem 'faker',                        '~> 2.21.0'
 gem 'matrix',                       '~> 0.4.2'
 gem 'net-smtp',                     '~> 0.3.1'
 gem 'puma',                         '~> 5.6.4'
-gem 'sass-rails',                   '~> 6.0.0'
 gem 'turbolinks',                   '~> 5.2.1'
 gem 'webpacker',                    '~> 5.4.0'
-gem 'will_paginate',                '~> 3.3.1'
 
 group :development, :test do
   gem 'byebug',                     '~> 11.0.1', platforms: %i[mri mingw x64_mingw]

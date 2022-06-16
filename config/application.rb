@@ -43,5 +43,13 @@ module RailsMicroblog
     #   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
     # (called from <top (required)> at /Users/Suleyman/Projects/rails_microblog/config/environment.rb:8)
     # config.active_record.sqlite3.represent_boolean_as_integer = true
+
+    config.load_defaults 7.0
+    
+    # For new apps, image transformation will use libvips instead of ImageMagick. 
+    # This will reduce the time taken to generate variants as well as CPU and memory 
+    # usage, improving response times in apps that rely on Active Storage to serve their 
+    # images.
+    config.active_storage.variant_processor = :vips
   end
 end
