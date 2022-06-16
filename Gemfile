@@ -4,15 +4,9 @@ source 'https://rubygems.org'
 
 ruby '3.1.2'
 
-gem 'carrierwave',                  '~> 2.2.2'
-gem 'fog',                          '~> 2.2.0'
-gem 'mini_magick',                  '~> 4.11.0'
-
 gem 'rails',                        '~> 7.0.3'
-
-gem 'active_storage_validations',   '~> 0.9.8'
 gem 'image_processing',             '~> 1.12.2'
-
+gem 'active_storage_validations',   '~> 0.9.8'
 gem 'bcrypt',                       '~> 3.1.18'
 gem 'bootsnap',                     '~> 1.7.2', require: false
 gem 'bootstrap-sass',               '~> 3.4.1'
@@ -57,4 +51,5 @@ end
 group :production do
   gem 'aws-sdk-s3',                 '~> 1.114.0', require: false
   gem 'pg',                         '~> 1.3.5'
+  # gem 'ruby-vips',                  '~> 2.1.4'
 end
