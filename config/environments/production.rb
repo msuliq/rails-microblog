@@ -80,7 +80,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Store files on Amazon S3.
-  # config.active_storage.service = :amazon
+  config.active_storage.service = :amazon
 
   # Send emails through Twilio SendGrid addon for Heroku
   config.action_mailer.raise_delivery_errors = true
