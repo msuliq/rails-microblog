@@ -1,7 +1,4 @@
-/* settings for the color palette */
-
-$gray-light-medium: #eaeaea;
-
+@use 'variables';
 /* debug params display in development env*/
 
 @mixin box_sizing {
@@ -53,7 +50,7 @@ h2 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: $gray-light;
+    color: variables.$gray-light;
 }
 p {
     font-size: 1.1em;
@@ -83,14 +80,14 @@ p {
 footer {
     margin-top: 45px;
     padding-top: 5px;
-    border-top: 1px solid $gray-light-medium;
-    color: $gray-light;
+    border-top: 1px solid variables.$gray-light-medium;
+    color: variables.$gray-light;
     
     a {
-        color: $gray;
+        color: variables.$gray;
     
         &:hover {
-            color: $gray-darker;
+            color: variables.$gray-darker;
         }
     }
     
@@ -149,8 +146,8 @@ aside {
     a {
         float: left;
         padding: 0 10px;
-        border-left: 1px solid $gray-lighter;
-        color: gray;
+        border-left: 1px solid variables.$gray-lighter;
+        color: variables.$gray;
         &:first-child {
             padding-left: 0;
             border: 0;
@@ -197,9 +194,9 @@ input {
     }
 }
 .field_with_errors {
-    @extend .has-error;
+    @extend .has-error !optional;
     .form-control {
-        color: $state-danger-text;
+        color: variables.$state-danger-text;
     }
 }
 
@@ -223,7 +220,7 @@ input {
     li {
         overflow: auto;
         padding: 10px 0;
-        border-bottom: 1px solid $gray-lighter;
+        border-bottom: 1px solid variables.$gray-lighter;
     }
 }
 
@@ -248,7 +245,7 @@ input {
         }
     }
     .timestamp {
-        color: $gray-light;
+        color: variables.$gray-light;
         display: block;
         margin-left: 60px;
     }
