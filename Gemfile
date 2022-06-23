@@ -19,7 +19,9 @@ gem 'matrix',                       '~> 0.4.2'
 gem 'net-smtp',                     '~> 0.3.1'
 gem 'puma',                         '~> 5.6.4'
 gem 'turbolinks',                   '~> 5.2.1'
-gem 'webpacker',                    '~> 5.4.0'
+gem 'sprockets-rails',              '~> 3.4'
+gem 'jsbundling-rails',             '~> 1.0'
+gem 'cssbundling-rails',            '~> 1.1'
 
 group :development, :test do
   gem 'byebug',                     '~> 11.1.3', platforms: %i[mri mingw x64_mingw]
