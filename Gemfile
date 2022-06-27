@@ -9,19 +9,21 @@ gem 'image_processing',             '~> 1.12.2'
 gem 'active_storage_validations',   '~> 0.9.8'
 gem 'bcrypt',                       '~> 3.1.18'
 gem 'bootsnap',                     '~> 1.12.0', require: false
-gem 'bootstrap-sass',               '~> 3.4.1'
-gem 'sass-rails',                   '~> 6.0.0'
-gem 'will_paginate',                '~> 3.3.1'
-gem 'bootstrap-will_paginate',      '~> 1.0.0'
+# gem 'sass-rails',                   '~> 6.0'
+# gem 'bootstrap-sass',               '~> 3.4.1'
+# gem 'sass-rails',                   '~> 6.0.0'
+gem 'will_paginate',                '~> 3.3'
+gem 'bootstrap-will_paginate',      '~> 1'
 gem 'jbuilder',                     '~> 2.11.5'
 gem 'faker',                        '~> 2.21.0'
 gem 'matrix',                       '~> 0.4.2'
 gem 'net-smtp',                     '~> 0.3.1'
 gem 'puma',                         '~> 5.6.4'
-gem 'turbolinks',                   '~> 5.2.1'
-gem 'sprockets-rails',              '~> 3.4'
+# gem 'turbolinks',                   '~> 5.2.1'
+gem 'propshaft',                    '~> 0.6'
 gem 'jsbundling-rails',             '~> 1.0'
 gem 'cssbundling-rails',            '~> 1.1'
+gem 'turbo-rails',                  '~> 1.1'
 
 group :development, :test do
   gem 'byebug',                     '~> 11.1.3', platforms: %i[mri mingw x64_mingw]
@@ -55,3 +57,6 @@ group :production do
   gem 'pg',                         '~> 1.4.0'
   # gem 'ruby-vips',                  '~> 2.1.4'
 end
+
+# Use Redis for Action Cable
+gem "redis", "~> 4.6"
