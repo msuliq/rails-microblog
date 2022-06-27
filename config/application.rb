@@ -51,5 +51,10 @@ module RailsMicroblog
     # usage, improving response times in apps that rely on Active Storage to serve their 
     # images.
     config.active_storage.variant_processor = :vips
+    
+    # Turbo supersedes the functionality offered by Rails UJS to turn links and form 
+    # submissions into XMLHttpRequests, so if you're making a complete switch from 
+    # Rails UJS / Turbolinks to Turbo, you should ensure that you have
+    config.action_view.form_with_generates_remote_forms = false
   end
 end
