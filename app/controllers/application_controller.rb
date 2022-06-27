@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   # Sessions helper add support for login, logout and cookies
   include SessionsHelper
+  include Turbo::Redirection 
 
   private
 
