@@ -38,6 +38,7 @@ end
 # Separate login as method for integration tests
 module ActionDispatch
   class IntegrationTest
+    include TurboAssertionsHelper
     # Log in as a particular user.
     def log_in_as(user, password: 'password', remember_me: '1')
       post login_path, params: { session: { email: user.email,
