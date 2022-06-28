@@ -57,3 +57,6 @@ yarn-debug.log*
 !/app/assets/builds/.keep
 sendgrid.env
 dbseed.env
+
+# Ignore local environments configuration
+/config/local_env.yml
