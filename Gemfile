@@ -9,10 +9,8 @@ gem 'image_processing',             '~> 1.12'
 gem 'active_storage_validations',   '~> 0.9'
 gem 'bcrypt',                       '~> 3.1'
 gem 'bootsnap',                     '~> 1.12', require: false
-gem 'will_paginate',                '~> 3.3'
-gem 'bootstrap-will_paginate',      '~> 1'
+gem 'pagy',                         '~> 5.10'
 gem 'jbuilder',                     '~> 2.11'
-gem 'faker',                        '~> 2.21'
 gem 'matrix',                       '~> 0.4'
 gem 'net-smtp',                     '~> 0.3'
 gem 'puma',                         '~> 5.6'
@@ -20,7 +18,6 @@ gem 'propshaft',                    '~> 0.6'
 gem 'jsbundling-rails',             '~> 1.0'
 gem 'cssbundling-rails',            '~> 1.1'
 gem 'turbo-rails',                  '~> 1.1'
-# Use Redis for Action Cable
 gem 'redis',                        '~> 4.6'
 
 group :development, :test do
@@ -28,6 +25,7 @@ group :development, :test do
   gem 'rubocop-performance',        '~> 1.14'
   gem 'rubocop-rails',              '~> 2.15'
   gem 'sqlite3',                    '~> 1.4'
+  gem 'faker',                      '~> 2.21'
 end
 
 group :development do
