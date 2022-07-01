@@ -12,12 +12,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.where(activated: true).paginate(page: params[:page])
+    @pagy, @users = pagy(User.where(activated: true))
   end
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @pagy, @microposts = pagy(@user.microposts)
     redirect_to(root_url) unless @user.activated?
   end
 
@@ -57,14 +57,14 @@ class UsersController < ApplicationController
   def following
     @title = 'Following'
     @user = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @pagy, @users = pagy(@user.following)
     render 'show_follow'
   end
 
   def followers
     @title = 'Followers'
     @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @pagy, @users = pagy(@user.followers)
     render 'show_follow'
   end
 
