@@ -24,7 +24,7 @@
             <ul class="users follow">
                 <%= render @users %>
             </ul>
-            <%= will_paginate %>
+            <%== render partial: 'shared/bootstrap_nav', locals: {pagy: @pagy} %>
         <% end %>
     </div>
 </div>
