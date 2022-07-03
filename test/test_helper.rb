@@ -8,6 +8,7 @@ require File.expand_path('../config/environment', __dir__)
 require 'rails/test_help'
 # enable reporting tool for minitest
 require 'minitest/reporters'
+
 Minitest::Reporters.use!
 
 module ActiveSupport

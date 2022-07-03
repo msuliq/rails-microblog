@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+include Pagy::Backend
 
 class UsersIndexTest < ActionDispatch::IntegrationTest
   def setup
@@ -15,7 +16,8 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_template 'users/index'
     assert_select 'ul.pagination'
-    pagy(User.class, page: 1).each do |user|
+    _pagy, users = pagy(User.all, page: 1)
+    users.each do |user|
       assert_select 'a[href=?]', user_path(user), text: user.name
     end
   end
@@ -26,7 +28,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_template 'users/index'
     assert_select 'ul.pagination'
-    first_page_of_users = pagy(User.class, page: 1)
+    _pagy, first_page_of_users = pagy(User.all, page: 1)
     first_page_of_users.each do |user|
       assert_select 'a[href=?]', user_path(user), text: user.name
       unless user == @admin

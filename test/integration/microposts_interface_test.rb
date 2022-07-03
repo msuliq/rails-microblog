@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+include Pagy::Backend
 
 class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   def setup
@@ -33,7 +34,8 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
 
     # Deletion of a post
     assert_select 'a', text: 'delete'
-    first_micropost = pagy(@user.microposts, page: 1).first
+    _pagy, first_micropost = pagy(@user.microposts, page: 1)
+    first_micropost = first_micropost.first
     assert_difference 'Micropost.count', -1 do
       delete micropost_path(first_micropost)
     end

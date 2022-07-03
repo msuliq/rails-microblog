@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+include Pagy::Backend
 
 class FollowingTest < ActionDispatch::IntegrationTest
   def setup
@@ -57,8 +58,10 @@ class FollowingTest < ActionDispatch::IntegrationTest
 
   test 'feed on Home page' do
     get root_path
-    @user.feed.paginate(page: 1).each do |micropost|
+    _pagy, microposts = pagy(@user.feed, page: 1)
+    microposts.each do |micropost|
       assert_match CGI.escapeHTML(micropost.content), response.body
     end
   end
+
 end
