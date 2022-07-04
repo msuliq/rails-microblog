@@ -18,11 +18,12 @@ module RailsMicroblog
     # http://railsapps.github.io/rails-environment-variables.html
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')
-      YAML.load(File.open(env_file)).each do |key, value|
-        ENV[key.to_s] = value
-      end if File.exists?(env_file)
+      if File.exist?(env_file)
+        YAML.load(File.open(env_file)).each do |key, value|
+          ENV[key.to_s] = value
+        end
+      end
     end
-
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
@@ -55,15 +56,15 @@ module RailsMicroblog
     # config.active_record.sqlite3.represent_boolean_as_integer = true
 
     config.load_defaults 7.0
-    
-    # For new apps, image transformation will use libvips instead of ImageMagick. 
-    # This will reduce the time taken to generate variants as well as CPU and memory 
-    # usage, improving response times in apps that rely on Active Storage to serve their 
+
+    # For new apps, image transformation will use libvips instead of ImageMagick.
+    # This will reduce the time taken to generate variants as well as CPU and memory
+    # usage, improving response times in apps that rely on Active Storage to serve their
     # images.
     config.active_storage.variant_processor = :vips
-    
-    # Turbo supersedes the functionality offered by Rails UJS to turn links and form 
-    # submissions into XMLHttpRequests, so if you're making a complete switch from 
+
+    # Turbo supersedes the functionality offered by Rails UJS to turn links and form
+    # submissions into XMLHttpRequests, so if you're making a complete switch from
     # Rails UJS / Turbolinks to Turbo, you should ensure that you have
     config.action_view.form_with_generates_remote_forms = false
   end

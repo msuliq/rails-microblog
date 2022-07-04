@@ -4,28 +4,28 @@ source 'https://rubygems.org'
 
 ruby '3.1.2'
 
-gem 'rails',                        '~> 7.0'
-gem 'image_processing',             '~> 1.12'
 gem 'active_storage_validations',   '~> 0.9'
 gem 'bcrypt',                       '~> 3.1'
 gem 'bootsnap',                     '~> 1.12', require: false
-gem 'pagy',                         '~> 5.10'
+gem 'cssbundling-rails',            '~> 1.1'
+gem 'image_processing',             '~> 1.12'
 gem 'jbuilder',                     '~> 2.11'
+gem 'jsbundling-rails',             '~> 1.0'
 gem 'matrix',                       '~> 0.4'
 gem 'net-smtp',                     '~> 0.3'
-gem 'puma',                         '~> 5.6'
+gem 'pagy',                         '~> 5.10'
 gem 'propshaft',                    '~> 0.6'
-gem 'jsbundling-rails',             '~> 1.0'
-gem 'cssbundling-rails',            '~> 1.1'
-gem 'turbo-rails',                  '~> 1.1'
+gem 'puma',                         '~> 5.6'
+gem 'rails',                        '~> 7.0'
 gem 'redis',                        '~> 4.6'
+gem 'turbo-rails',                  '~> 1.1'
 
 group :development, :test do
   gem 'byebug',                     '~> 11.1', platforms: %i[mri mingw x64_mingw]
+  gem 'faker',                      '~> 2.21'
   gem 'rubocop-performance',        '~> 1.14'
   gem 'rubocop-rails',              '~> 2.15'
   gem 'sqlite3',                    '~> 1.4'
-  gem 'faker',                      '~> 2.21'
 end
 
 group :development do
@@ -51,5 +51,4 @@ end
 group :production do
   gem 'aws-sdk-s3',                 '~> 1.114', require: false
   gem 'pg',                         '~> 1.4'
-  # gem 'ruby-vips',                  '~> 2.1'
 end

@@ -9,9 +9,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(name: 'Admin User',
-             email: ENV["DBSEED_USERNAME"],
-             password: ENV["DBSEED_PASSWORD"],
-             password_confirmation: ENV["DBSEED_PASSWORD_CONFIRMATION"],
+             email: ENV['DBSEED_USERNAME'],
+             password: ENV['DBSEED_PASSWORD'],
+             password_confirmation: ENV['DBSEED_PASSWORD_CONFIRMATION'],
              admin: true,
              activated: true,
              activated_at: Time.zone.now)

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   include Turbo::Redirection
   include SessionsHelper
- 
+
   private
 
   # Used in users and microposts controllers

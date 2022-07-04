@@ -2,7 +2,7 @@
 
 module ApplicationHelper
   include Pagy::Frontend
-  
+
   # provides full title to the webpage
   def full_title(page_title = '')
     base_title = 'Sample microblog app'
