@@ -5,14 +5,14 @@
 <p>Initially the app was written using Ruby 2.2 and Rails 4, afterwards the following upgrades were done:</p>
 
 <ul>
-<li>Ruby 2.2 > 2.4 > 2.6 > 3.1</li>
-<li>Rails 4 > 5 > 6 > 7</li>
-<li>sprockets, sass-rails, bootstrap-sass > webpacker, npm >> esbuild, css/jsbundling, propshaft</li>
-<li>carrierwave > active_storage</li>
-<li>mini_magick > vips</li>
-<li>turbolinks > turbo-rails</li>
-<li>will_paginate > pagy</li>
-<li>bootstrap 3 > bootstrap 5</li>
+   <li>Ruby 2.2 > 2.4 > 2.6 > 3.1</li>
+   <li>Rails 4 > 5 > 6 > 7</li>
+   <li>sprockets, sass-rails, bootstrap-sass > webpacker, npm >> esbuild, css/jsbundling, propshaft</li>
+   <li>carrierwave > active_storage</li>
+   <li>mini_magick > vips</li>
+   <li>turbolinks > turbo-rails</li>
+   <li>will_paginate > pagy</li>
+   <li>bootstrap 3 > bootstrap 5</li>
 </ul>
 
 <h1>License</h1>
@@ -21,64 +21,48 @@
 <h1>Getting started</h1>
 <p>To get started with the app, clone the repo and then install the needed gems. You can clone the repo as follows:</p>
 
-<code>
-$ git clone https://github.com/msuliq/rails-microblog.git</br> 
-$ cd rails-microblog/
-</code>
+<code>$ git clone https://github.com/msuliq/rails-microblog.git</code></br> 
+<code>$ cd rails-microblog/</code>
 
 <p>To install the gems, you will need the same versions of Ruby and Bundler used to build the sample app, which you can find using the cat and tail commands as follows:</p>
 
-<code>
-$ cat .ruby-version</br>
-<Ruby version number></br>
-$ tail -n1 Gemfile.lock</br>
-   <Bundler version number>
-</code>
+<code>$ cat .ruby-version</code></br>
+<code><Ruby version number></code></br>
+<code>$ tail -n1 Gemfile.lock</code></br>
+<code>   <Bundler version number></code>
 
 <p> Next, install the versions of ruby and the bundler gem from the above commands. The Ruby installation is system-dependent. If you are using rvm you can type following commands in the terminal:</p>
 
-<code>
-$ rvm get stable</br>
-$ rvm install <Ruby version number></br>
-$ rvm --default use <Ruby version number>
-</code>
+<code>$ rvm get stable</code></br>
+<code>$ rvm install <Ruby version number></code></br>
+<code>$ rvm --default use <Ruby version number></code>
 
 <p>See the section Up and running for more details. Once Ruby is installed, the bundler gem can be installed using the gem command:</p>
-<code>
-$ gem install bundler -v <version number>
-</code>
+<code>$ gem install bundler -v <version number></code>
 
 <p>Then the rest of the necessary gems can be installed with bundle (taking care to skip any production gems in the development environment):</p>
-<code>
-$ bundle _<version number>_ config set --local without 'production'</br>
-$ bundle _<version number>_ install
-</code>
+   
+<code>$ bundle _<version number>_ config set --local without 'production'</code</br>
+<code>$ bundle _<version number>_ install</code>
 
 <p>Here you should replace <version number> with the actual version number. For example, if <version number> is 2.3.11, then the commands should look like this:</p>
-<code>
-$ gem install bundler -v 2.3.11</br>
-$ bundle _2.3.11_ config set --local without 'production'</br>
-$ bundle _2.3.11_ install
-</code>
+   
+<code>$ gem install bundler -v 2.3.11</code></br>
+<code>$ bundle _2.3.11_ config set --local without 'production'</code></br>
+<code>$ bundle _2.3.11_ install</code>
 
 <p>Next, migrate the database:</p>
-<code>
-$ rails db:migrate
-</code>
+<code>$ rails db:migrate</code>
 
 <p>Finally, run the test suite to verify that everything is working correctly:</p>
-<code>
-$ rails test
-</code>
+<code>$ rails test</code>
 
 <p>If the test suite passes, you’ll be ready to seed the database with sample users and run the app in a local server:</p>
 
-<code>
-$ rails db:seed</br>
-$ bin/dev
-</code>
+<code>$ rails db:seed</code></br>
+<code>$ bin/dev</code>
 
-<p>Follow the instructions in terminal to view the app. The http address might look like <text>http://127.0.0.1:3000</text>.</p>
+<p>Follow the instructions in terminal to view the app. The address that you need to type or copy and paste into the browser of your preference might look like <em>127.0.0.1:3000</em>.</p>
 
 <h1>Deployment</h1>
 <p>This sample app is deployed to Heroku at <a href=https://rails-microblogg.herokuapp.com>https://rails-microblogg.herokuapp.com/</a>
