@@ -2,7 +2,7 @@
 
 This is the sample microblog application developed using Ruby on Rails and fourth edition of the [*Ruby on Rails Tutorial: Learn Web Development with Rails*](https://www.railstutorial.org/) by [Michael Hartl](https://www.michaelhartl.com/).
 
-Initially the app was written using Ruby 2.2 and Rails 4, afterwards the following upgrades were done:
+Initially the app was written using Ruby 2.2 and Rails 4. Based on that code was optimized and below is snapshot of major upgrades and improvements, not counting minor tweaks:
 
     Ruby 2.2 > 2.4 > 2.6 > 3.1
     Rails 4 > 5 > 6 > 7
