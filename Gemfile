@@ -19,10 +19,10 @@ gem 'puma',                         '~> 5.6'
 gem 'rails',                        '~> 7.0'
 gem 'redis',                        '~> 4.6'
 gem 'turbo-rails',                  '~> 1.1'
+gem 'faker',                        '~> 2.21'
 
 group :development, :test do
   gem 'byebug',                     '~> 11.1', platforms: %i[mri mingw x64_mingw]
-  gem 'faker',                      '~> 2.21'
   gem 'rubocop-performance',        '~> 1.14'
   gem 'rubocop-rails',              '~> 2.15'
   gem 'sqlite3',                    '~> 1.4'
