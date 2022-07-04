@@ -17,12 +17,12 @@ class SessionsController < ApplicationController
         message = 'Account not activated.'
         message += 'Check your email for the activation link.'
         flash[:warning] = message
-        redirect_to root_url
+        redirect_to root_url, status: :unprocessable_entity
       end
     else
       # Flashes an error message if password or email don't match
       flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
 

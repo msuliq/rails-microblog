@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       store_location
       flash[:danger] = 'Please log in.'
-      redirect_to login_url
+      redirect_to login_url, status: :unprocessable_entity
     end
   end
 end
