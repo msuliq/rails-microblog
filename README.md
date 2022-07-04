@@ -1,71 +1,91 @@
-<h1>Sample microblog application.</h1>
+# Sample microblog application
 
-<p>This is the sample microblog application developed using Ruby on Rails and fourth edition of the <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial: Learn Web Development with Rails</a> by <a href="http://www.michaelhartl.com/">Michael Hartl.</a></p>
+This is the sample microblog application developed using Ruby on Rails and fourth edition of the [*Ruby on Rails Tutorial: Learn Web Development with Rails*](https://www.railstutorial.org/) by [Michael Hartl](https://www.michaelhartl.com/).
 
-<p>Initially the app was written using Ruby 2.2 and Rails 4, afterwards the following upgrades were done:</p>
+Initially the app was written using Ruby 2.2 and Rails 4, afterwards the following upgrades were done:
 
-<ul>
-   <li>Ruby 2.2 > 2.4 > 2.6 > 3.1</li>
-   <li>Rails 4 > 5 > 6 > 7</li>
-   <li>sprockets, sass-rails, bootstrap-sass > webpacker, npm >> esbuild, css/jsbundling, propshaft</li>
-   <li>carrierwave > active_storage</li>
-   <li>mini_magick > vips</li>
-   <li>turbolinks > turbo-rails</li>
-   <li>will_paginate > pagy</li>
-   <li>bootstrap 3 > bootstrap 5</li>
-</ul>
+    Ruby 2.2 > 2.4 > 2.6 > 3.1
+    Rails 4 > 5 > 6 > 7
+    sprockets, sass-rails, bootstrap-sass > webpacker, npm >> esbuild, css/jsbundling, propshaft
+    carrierwave > active_storage
+    mini_magick > vips
+    turbolinks > turbo-rails
+    will_paginate > pagy
+    bootstrap 3 > bootstrap 5
 
-<h1>License</h1>
-<p>All source code is available jointly under the MIT License. See <a href="https://github.com/msuliq/rails-microblog/blob/master/LICENSE.MD">LICENSE.MD</a> for details.</p>
+## License
+All source code is available jointly under the MIT License. See [LICENSE.MD](https://github.com/msuliq/rails-microblog/blob/master/LICENSE.MD) for details.
 
-<h1>Getting started</h1>
-<p>To get started with the app, clone the repo and then install the needed gems. You can clone the repo as follows:</p>
+## Getting started
+To get started with the app, clone the repo and then install the needed gems. You can clone the repo as follows:
 
-<code>$ git clone https://github.com/msuliq/rails-microblog.git</code></br> 
-<code>$ cd rails-microblog/</code>
+```
+$ git clone https://github.com/msuliq/rails-microblog.git 
+$ cd rails-microblog/
+```
 
-<p>To install the gems, you will need the same versions of Ruby and Bundler used to build the sample app, which you can find using the cat and tail commands as follows:</p>
+To install the gems, you will need the same versions of Ruby and Bundler used to build the sample app, which you can find using the cat and tail commands as follows:
 
-<code>$ cat .ruby-version</code></br>
-<code><Ruby version number></code></br>
-<code>$ tail -n1 Gemfile.lock</code></br>
-<code>   <Bundler version number></code>
+```
+$ cat .ruby-version
+<Ruby version number>
+$ tail -n1 Gemfile.lock
+   <Bundler version number>
+```
 
-<p> Next, install the versions of ruby and the bundler gem from the above commands. The Ruby installation is system-dependent. If you are using rvm you can type following commands in the terminal:</p>
+Next, install the versions of ruby and the bundler gem from the above commands. The Ruby installation is system-dependent. If you are using rvm you can type following commands in the terminal:
 
-<code>$ rvm get stable</code></br>
-<code>$ rvm install <Ruby version number></code></br>
-<code>$ rvm --default use <Ruby version number></code>
+```
+$ rvm get stable
+$ rvm install <Ruby version number>
+$ rvm --default use <Ruby version number>
+```
 
-<p>See the section Up and running for more details. Once Ruby is installed, the bundler gem can be installed using the gem command:</p>
-<code>$ gem install bundler -v <version number></code>
+See the section Up and running for more details. Once Ruby is installed, the bundler gem can be installed using the gem command:
 
-<p>Then the rest of the necessary gems can be installed with bundle (taking care to skip any production gems in the development environment):</p>
-   
-<code>$ bundle _<version number>_ config set --local without 'production'</code</br>
-<code>$ bundle _<version number>_ install</code>
+```
+$ gem install bundler -v <version number>
+```
 
-<p>Here you should replace <version number> with the actual version number. For example, if <version number> is 2.3.11, then the commands should look like this:</p>
-   
-<code>$ gem install bundler -v 2.3.11</code></br>
-<code>$ bundle _2.3.11_ config set --local without 'production'</code></br>
-<code>$ bundle _2.3.11_ install</code>
+Then the rest of the necessary gems can be installed with bundle (taking care to skip any production gems in the development environment):
 
-<p>Next, migrate the database:</p>
-<code>$ rails db:migrate</code>
+```
+$ bundle _<version number>_ config set --local without 'production'
+$ bundle _<version number>_ install
+```
 
-<p>Finally, run the test suite to verify that everything is working correctly:</p>
-<code>$ rails test</code>
+Here you should replace `<version number>` with the actual version number. For example, if `<version number>` is `2.3.11`, then the commands should look like this:
 
-<p>If the test suite passes, you’ll be ready to seed the database with sample users and run the app in a local server:</p>
+```
+$ gem install bundler -v 2.3.11
+$ bundle _2.3.11_ config set --local without 'production'
+$ bundle _2.3.11_ install
+```
 
-<code>$ rails db:seed</code></br>
-<code>$ bin/dev</code>
+Next, migrate the database:
 
-<p>Follow the instructions in terminal to view the app. The address that you need to type or copy and paste into the browser of your preference might look like <em>127.0.0.1:3000</em>.</p>
+```
+$ rails db:migrate
+```
 
-<h1>Deployment</h1>
-<p>This sample app is deployed to Heroku at <a href=https://rails-microblogg.herokuapp.com>https://rails-microblogg.herokuapp.com/</a>
-<p>The full production app includes several advanced features, including sending email with Twilio SendGrid and storing uploaded images with AWS S3.</p> 
+Finally, run the test suite to verify that everything is working correctly:
 
-<p>Visiting the URL above should show you the sample app running in production. As with the local version, you can then register a new user or log in as the sample non-admin user with the email <text>example@railstutorial.org</text> and password foobaz.</p>
+```
+$ rails test
+```
+
+If the test suite passes, you’ll be ready to seed the database with sample users and run the app in a local server:
+
+```
+$ rails db:seed
+$ bin/dev
+```
+
+Follow the instructions in terminal to view the app. The http address might look like `http://127.0.0.1:3000`
+
+## Deployment
+This sample app is deployed to Heroku at [*rails-microblogg*](https://rails-microblogg.herokuapp.com).
+
+The full production app includes several advanced features, including sending email with Twilio SendGrid and storing uploaded images with AWS S3.
+
+Visiting the URL above should show you the sample app running in production. As with the local version, you can then register a new user or log in as the sample non-admin user with the email `example@railstutorial.org` and password `foobaz`.
