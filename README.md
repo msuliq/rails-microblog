@@ -14,7 +14,7 @@ Initially the app was written using Ruby 2.2 and Rails 4. Based on that code was
     bootstrap 3 > bootstrap 5
 
 ## License
-All source code is available jointly under the MIT License. See [LICENSE.MD](https://github.com/msuliq/rails-microblog/blob/master/LICENSE.MD) for details.
+All source code is available under the MIT License. See [LICENSE.MD](https://github.com/msuliq/rails-microblog/blob/master/LICENSE.MD) for details.
 
 ## Getting started
 To get started with the app, clone the repo and then install the needed gems. You can clone the repo as follows:
@@ -41,7 +41,7 @@ $ rvm install <Ruby version number>
 $ rvm --default use <Ruby version number>
 ```
 
-See the section Up and running for more details. Once Ruby is installed, the bundler gem can be installed using the gem command:
+See the section ["Up and running" of the Rails Tutorial](https://www.learnenough.com/ruby-on-rails-7th-edition-tutorial#sec-up_and_running) for more details. Once Ruby is installed, the bundler gem can be installed using the gem command:
 
 ```
 $ gem install bundler -v <version number>
@@ -81,10 +81,10 @@ $ rails db:seed
 $ bin/dev
 ```
 
-Follow the instructions in terminal to view the app. The http address might look like `http://127.0.0.1:3000`
+Follow the instructions in terminal to view the app. The http address might look like `http://127.0.0.1:3000`.
 
 ## Deployment
-This sample app is deployed to Heroku at [*rails-microblogg*](https://rails-microblogg.herokuapp.com).
+This sample microblog app is deployed to Heroku at [*rails-microblogg*](https://rails-microblogg.herokuapp.com).
 
 The full production app includes several advanced features, including sending email with Twilio SendGrid and storing uploaded images with AWS S3.
 
