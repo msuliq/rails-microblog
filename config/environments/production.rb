@@ -97,13 +97,13 @@ Rails.application.configure do
   host = 'https://rails-microblogg.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    from: 'sampleapp@mail.ee',
     address: 'smtp.sendgrid.net',
     port: '587',
     authentication: :plain,
-    user_name: ENV['SENDGRID_USERNAME'],
-    password: ENV['SENDGRID_PASSWORD'],
+    user_name: ENV['SENDGRID_API_USERNAME'],
+    password: ENV['SENDGRID_API_PASSWORD'],
     domain: 'https://rails-microblogg.herokuapp.com',
     enable_starttls_auto: true
   }
+  ActionMailer::Base.delivery_method = :smtp
 end
