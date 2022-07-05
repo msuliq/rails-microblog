@@ -18,7 +18,7 @@
             <ol class="microposts">
                 <%= render @microposts %>
             </ol>
-    <%== render partial: 'shared/bootstrap_nav' if @pagy.pages > 1, locals: {pagy: @pagy} %>
+            <%== render partial: 'shared/bootstrap_nav', locals: {pagy: @pagy} %>
         <% end %>
     </div>
 </div>

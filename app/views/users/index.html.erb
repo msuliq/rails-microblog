@@ -1,8 +1,8 @@
 <% provide(:title, 'All users') %>
 <h1>All users</h1>
 
-    <%== render partial: 'shared/bootstrap_nav' if @pagy.pages > 1, locals: {pagy: @pagy} %>
+<%== render partial: 'shared/bootstrap_nav', locals: {pagy: @pagy} %>
 <ul class="users">
     <%= render @users %>
 </ul>
-    <%== render partial: 'shared/bootstrap_nav' if @pagy.pages > 1, locals: {pagy: @pagy} %>
+<%== render partial: 'shared/bootstrap_nav', locals: {pagy: @pagy} %>
