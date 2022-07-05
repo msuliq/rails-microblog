@@ -356,6 +356,7 @@ DEPENDENCIES
   rubocop-minitest (~> 0.20)
   rubocop-performance (~> 1.14)
   rubocop-rails (~> 2.15)
+  ruby-vips (~> 2.1)
   selenium-webdriver (~> 4.2)
   simplecov (~> 0.21)
   spring (~> 4.0)

@@ -51,4 +51,5 @@ end
 group :production do
   gem 'aws-sdk-s3',                 '~> 1.114', require: false
   gem 'pg',                         '~> 1.4'
+  gem 'ruby-vips',                  '~> 2.1'
 end
