@@ -88,4 +88,4 @@ This sample microblog app is deployed to Heroku at [*rails-microblogg*](https://
 
 The full production app includes several advanced features, including sending email through SMTP and storing uploaded images with AWS S3.
 
-Visiting the URL above should show you the sample app running in production. As with the local version, you can then register a new user or log in as the sample non-admin user with the email `example@railstutorial.org` and password `foobaz`.
+Visiting the URL above should show you the sample app running in production. There you can register as a new user or log in as non-admin user with the email `example@railstutorial.org` and password `foobaz`.
