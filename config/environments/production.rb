@@ -94,16 +94,19 @@ Rails.application.configure do
   # Send emails through Twilio SendGrid addon for Heroku
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'https://rails-microblogg.herokuapp.com'
+  ActionMailer::Base.delivery_method = :smtp
+
+  host = 'https://mail.ee'
   config.action_mailer.default_url_options = { host: host }
+
   ActionMailer::Base.smtp_settings = {
-    address: 'smtp.sendgrid.net',
-    port: '587',
+    address: 'insecure.mail.ee',
+    port: 25,
+    user_name: 'sampleapp@mail.ee',
+    password: ENV['MAILEE_PASSWORD'],
     authentication: :plain,
-    user_name: ENV['SENDGRID_API_USERNAME'],
-    password: ENV['SENDGRID_API_PASSWORD'],
-    domain: 'https://rails-microblogg.herokuapp.com',
+    domain: 'mail.ee',
     enable_starttls_auto: true
   }
-  ActionMailer::Base.delivery_method = :smtp
+
 end
