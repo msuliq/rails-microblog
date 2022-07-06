@@ -96,7 +96,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.delivery_method = :smtp
 
-  host = 'https://mail.ee'
+  host = 'https://rails-microblogg.herokuapp.com/'
   config.action_mailer.default_url_options = { host: host }
 
   ActionMailer::Base.smtp_settings = {
