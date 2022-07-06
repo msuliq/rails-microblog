@@ -11,14 +11,14 @@ class MicropostsControllerTest < ActionController::TestCase
     assert_no_difference 'Micropost.count' do
       post :create, params: { micropost: { content: 'Lorem ipsum' } }
     end
-    assert_redirected_to login_url
+    assert_template @feed_items
   end
 
   test 'should redirect destroy when not logged in' do
     assert_no_difference 'Micropost.count' do
       delete :destroy, params: { id: @micropost }
     end
-    assert_redirected_to login_url
+    assert_template @feed_items
   end
 
   test 'should redirect destroy for wrong micropost' do
@@ -27,6 +27,6 @@ class MicropostsControllerTest < ActionController::TestCase
     assert_no_difference 'Micropost.count' do
       delete :destroy, params: { id: micropost }
     end
-    assert_redirected_to root_url
+    assert_template @feed_items
   end
 end
