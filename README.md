@@ -84,7 +84,7 @@ $ bin/dev
 Follow the instructions in terminal to view the app. The http address might look like `http://127.0.0.1:3000`.
 
 ## Deployment
-This sample microblog app is deployed to Heroku at [*rails-microblogg*](https://rails-microblogg.herokuapp.com).
+This sample microblog app is deployed to Heroku at [*rails-microblogg*](https://rails-microblogg.herokuapp.com) with free-tier dyno. Due to Heroku's change in policy and discontinuation of offering free-tier dynos, the app will no longer be available in production environment after Octber 26, 2022.
 
 The full production app includes several advanced features, including sending email through SMTP and storing uploaded images with AWS S3.
 
